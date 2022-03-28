@@ -1,0 +1,78 @@
+.contenedor-anuncios {
+    @include tablet {
+        @include grid(3, 2rem);
+    }
+}
+
+.anuncio {
+    margin-top: $separacion/2;
+    background-color: lighten($gris, 5);
+    border: 1px solid darken($gris, $amount: 5);
+    .contenido-anuncio {
+        padding: 2rem;
+    }
+    h3 {
+        text-transform: capitalize;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+    h3 {
+        margin: 0;
+    }
+    .imagen-anuncio {
+        max-width: 70rem;
+    }
+}
+
+.precio {
+    font-size: 3rem;
+    font-weight: bold;
+    color: $verde;
+}
+
+.iconos-caracteristicas {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    max-width: 35rem;
+    li {
+        flex: 1; //toma todo elespacio 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            flex: 5rem;
+            padding: 0 2rem;
+            @include tablet {
+                padding: 0 1.2rem;
+            }
+            @include desktop {
+                padding: 0 2.5rem;
+            }
+            margin: 0;
+        }
+        p {
+            font-weight: $black;
+            margin: 0;
+        }
+    }
+}
+
+.ver-todas {
+    margin-top: $separacion/2;
+    a {
+        display: block;
+        @include tablet {
+            display: inline-block;
+        }
+    }
+    @include tablet {
+        margin-top: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.resumen-propiedad {
+    padding: 0 2rem;
+}

@@ -1,0 +1,29 @@
+.boton-amarillo {
+    @include boton($amarillo, block);
+}
+
+.boton-verde-block {
+    @include boton($verde, block);
+}
+
+.boton-amarillo-inlineblock {
+    @include boton($amarillo, inline-block);
+}
+
+.boton-verde {
+    @include boton($verde, inline-block);
+}
+
+.boton-rojo-block {
+    @include boton($rojo, block);
+    width: 100%;
+}
+
+.botones-formulario {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
